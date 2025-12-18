@@ -166,8 +166,15 @@ main{ padding: 18px 0 40px; }
   height: 24px;
 }
 
+:root{
+  --space: 18px;
+}
+
+#content > * + *{
+  margin-top: var(--space);
+}
+
 .grid{
-  margin-top: 16px;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
