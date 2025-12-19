@@ -1,0 +1,41 @@
+# --- OS / Editor junk ---
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# JetBrains
+.idea/
+
+# Logs
+*.log
+
+# Node / frontend tooling (if you ever use it)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build outputs (common static site generators / bundlers)
+dist/
+build/
+out/
+.cache/
+.tmp/
+.temp/
+.sass-cache/
+.parcel-cache/
+.next/
+.nuxt/
+.svelte-kit/
+.hugo_build.lock
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Local dev server / tooling
+*.local
