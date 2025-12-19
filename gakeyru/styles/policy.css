@@ -1,0 +1,210 @@
+:root{
+    --bg: #0b0d10;
+    --paper: #12161b;
+    --text: #e6e9ee;
+    --muted: #a9b2bd;
+    --border: rgba(255,255,255,.10);
+    --link: #7ab7ff;
+    --shadow: rgba(0,0,0,.35);
+    --radius: 16px;
+    --max: 980px;
+}
+
+@media (prefers-color-scheme: light){
+    :root{
+        --bg: #f6f7f9;
+        --paper: #ffffff;
+        --text: #14171a;
+        --muted: #5d6670;
+        --border: rgba(0,0,0,.10);
+        --link: #0b63d6;
+        --shadow: rgba(0,0,0,.08);
+    }
+}
+
+*{ box-sizing: border-box; }
+
+/* Fondo en HTML para que no se "corte" */
+html{
+    min-height: 100%;
+    background: radial-gradient(1200px 800px at 20% 0%, rgba(122,183,255,.10), transparent 60%),
+    radial-gradient(900px 700px at 90% 20%, rgba(255,255,255,.06), transparent 60%),
+    var(--bg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: var(--bg);
+}
+
+body{
+    margin: 0;
+    min-height: 100%;
+    background: transparent;
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    color: var(--text);
+    line-height: 1.6;
+}
+
+a{
+    color: var(--link);
+    text-decoration: none;
+}
+a:hover{ text-decoration: underline; }
+
+.wrap{
+    width: min(var(--max), calc(100% - 2rem));
+    margin-inline: auto;
+}
+
+.skip-link{
+    position: absolute;
+    left: -999px;
+    top: 0;
+    background: var(--paper);
+    border: 1px solid var(--border);
+    padding: .6rem .9rem;
+    border-radius: 10px;
+    z-index: 1000;
+}
+.skip-link:focus{
+    left: 1rem;
+    top: 1rem;
+}
+
+.site-header{
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(12px);
+    background: color-mix(in srgb, var(--bg) 70%, transparent);
+    border-bottom: 1px solid var(--border);
+    z-index: 50;
+}
+
+.site-header .wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.brand__title{
+    font-weight: 800;
+    letter-spacing: .2px;
+}
+.brand__subtitle{
+    color: var(--muted);
+    font-size: .95rem;
+}
+
+.top-nav{
+    display: flex;
+    gap: .9rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.top-nav a{
+    padding: .35rem .6rem;
+    border-radius: 999px;
+    border: 1px solid transparent;
+}
+.top-nav a.active{
+    border-color: var(--border);
+    background: color-mix(in srgb, var(--paper) 80%, transparent);
+}
+
+.paper{
+    margin: 2rem 0 3rem;
+    background: color-mix(in srgb, var(--paper) 92%, transparent);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: 0 18px 60px var(--shadow);
+    overflow: hidden;
+}
+
+.paper__header{
+    padding: 2rem 2rem 1rem;
+    border-bottom: 1px solid var(--border);
+}
+.paper__header h1{
+    margin: 0 0 .25rem;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    letter-spacing: .2px;
+}
+.muted{
+    color: var(--muted);
+    margin: .25rem 0 0;
+}
+
+.intro{
+    padding: 1.4rem 2rem 0;
+}
+
+.toc{
+    padding: 1.2rem 2rem 1.2rem;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    background: color-mix(in srgb, var(--paper) 85%, transparent);
+}
+.toc h2{ margin-top: 0; }
+.toc ol{
+    margin: .5rem 0 0;
+    padding-left: 1.2rem;
+}
+
+section{
+    padding: 1.2rem 2rem;
+}
+section h2{
+    margin-top: 0;
+    font-size: 1.25rem;
+}
+section h3{
+    margin-bottom: .3rem;
+    font-size: 1.05rem;
+    color: color-mix(in srgb, var(--text) 85%, var(--muted));
+}
+
+ul, ol{ padding-left: 1.25rem; }
+li{ margin: .25rem 0; }
+
+.note{
+    border-left: 3px solid color-mix(in srgb, var(--link) 55%, transparent);
+    padding: .75rem 1rem;
+    border-radius: 10px;
+    background: color-mix(in srgb, var(--paper) 80%, transparent);
+}
+
+.paper__footer{
+    padding: 1rem 2rem 1.6rem;
+    border-top: 1px solid var(--border);
+}
+
+.site-footer{
+    border-top: 1px solid var(--border);
+    padding: 1.25rem 0 2rem;
+}
+
+@media (max-width: 560px){
+    .paper__header, .intro, .toc, section, .paper__footer{
+        padding-inline: 1.1rem;
+    }
+    .site-header .wrap{
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .top-nav{
+        justify-content: flex-start;
+    }
+}
+
+@media print{
+    html{ background: #fff; }
+    body{ background: transparent; color: #000; }
+    .site-header, .site-footer, .top-nav, .skip-link{ display: none !important; }
+    .paper{
+        border: none;
+        box-shadow: none;
+        margin: 0;
+    }
+    a{ color: #000; text-decoration: underline; }
+}
