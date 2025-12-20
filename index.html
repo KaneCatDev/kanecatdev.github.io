@@ -1,165 +1,174 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>KaneCat Dev · Portfolio</title>
-  <meta name="description" content="Computer Science Student · Mobile Apps · Backend · Video Games" />
-  <link rel="stylesheet" href="./styles/index.css" />
-  <link rel="icon" href="./imgs/kanecatdev.ico" sizes="any">
-  
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>KaneCat Dev · Portfolio</title>
+    <meta name="description" content="Computer Science Student · Mobile Apps · Backend · Video Games"/>
+    <link rel="stylesheet" href="./styles/index.css"/>
+    <link rel="icon" href="./imgs/kanecatdev.ico" sizes="any">
+
 </head>
 
 <body>
-  <a class="skip" href="#content">Skip to content</a>
+<a class="skip" href="#content">Skip to content</a>
 
-  <header class="topbar">
+<header class="topbar">
     <div class="wrap topbar__inner">
-      <div class="brand">
-        <div class="brand__dot" aria-hidden="true"></div>
-        <div class="brand__text">
-          <span class="brand__name">KaneCat Dev</span>
-          <span class="brand__tag">Computer Science Student</span>
+        <div class="brand">
+            <div class="brand__dot" aria-hidden="true"></div>
+            <div class="brand__text">
+                <span class="brand__name">KaneCat Dev</span>
+                <span class="brand__tag">Computer Science Student</span>
+            </div>
         </div>
-      </div>
 
-      <nav class="lang" aria-label="Language selector">
-        <a class="chip" href="./index.html" aria-current="page">English</a>
-        <span class="lang__sep" aria-hidden="true">·</span>
-        <a class="chip" href="./index_es.html">Español</a>
-      </nav>
+        <nav class="lang" aria-label="Language selector">
+            <a class="chip" href="./index.html" aria-current="page">English</a>
+            <span class="lang__sep" aria-hidden="true">·</span>
+            <a class="chip" href="./index_es.html">Español</a>
+        </nav>
     </div>
-  </header>
+</header>
 
-  <main id="content" class="wrap">
+<main id="content" class="wrap">
     <section class="hero card">
-      <p class="hero__line">
-        <strong>Computer Science Student</strong> · Mobile Apps · Backend · Video Games
-      </p>
+        <p class="hero__line">
+            <strong>Computer Science Student</strong> · Mobile Apps · Backend · Video Games
+        </p>
 
-      <div class="hero__actions">
-        <a class="btn" href="mailto:kanecat.dev@gmail.com" aria-label="Send email to kanecat.dev@gmail.com">
-          <img
-            class="badge"
-            alt="Email"
-            src="https://img.shields.io/badge/Email-EA4335?logo=gmail&logoColor=white"
-          />
-        </a>
-      </div>
+        <div class="hero__actions">
+            <a class="btn"
+               href="https://mail.google.com/mail/?view=cm&fs=0&to=kanecat.dev@gmail.com"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Send email to kanecat.dev@gmail.com">
+                <img class="badge" alt="Email"
+                     src="https://img.shields.io/badge/Email-EA4335?logo=gmail&logoColor=white" />
+            </a>
+            <a class="btn" href="https://discord.gg/aEehf2PVuR" target="_blank" aria-label="KaneCat Dev server">
+                <img
+                        class="badge"
+                        alt="Discord"
+                        src="https://img.shields.io/badge/Discord--5865F2?logo=discord&logoColor=white"
+                />
+            </a>
+        </div>
     </section>
 
     <section class="grid">
-      <section class="card">
-        <h2>About Me</h2>
+        <section class="card">
+            <h2>About Me</h2>
+            <ul class="list">
+                <li>Currently: <strong>Higher Vocational Training in Computer Science</strong></li>
+                <li>Focused on: <strong>Android / Java / Python</strong></li>
+                <li>Personal goal: learn <strong>C#</strong> for <strong>Unity</strong> and build video games</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Technologies</h2>
+
+            <div class="stack">
+                <h3>Languages</h3>
+                <p class="pillrow">
+                    <span class="pill">Java</span>
+                    <span class="pill">Python</span>
+                    <span class="pill">Kotlin</span>
+                    <span class="pill">HTML</span>
+                    <span class="pill">CSS</span>
+                    <span class="pill">C#</span>
+                </p>
+            </div>
+
+            <div class="stack">
+                <h3>Tools</h3>
+                <p class="pillrow">
+                    <span class="pill">Git</span>
+                    <span class="pill">GitHub</span>
+                    <span class="pill">IntelliJ</span>
+                    <span class="pill">Android Studio</span>
+                    <span class="pill">VS Code</span>
+                    <span class="pill">MySQL / SQL</span>
+                    <span class="pill">Spring Boot</span>
+                </p>
+            </div>
+        </section>
+    </section>
+
+    <section class="card">
+        <h2>Featured Projects</h2>
+
+        <div class="tablewrap" role="region" aria-label="Featured projects table" tabindex="0">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Info</th>
+                    <th>Link</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><strong>Gakeyru</strong></td>
+                    <td>A mobile app to find video game deals.</td>
+                    <td><span class="muted">*(Testing / Internal testing)* (Play Store)</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Guess Who? (Reflex)</strong></td>
+                    <td>“Guess Who?” game built with the <em>Reflex</em> framework.</td>
+                    <td>
+                        <a class="link" href="https://github.com/kanecatdev/quien-es-quien" target="_blank"
+                           rel="noreferrer">
+                            Guess Who? (GitHub)
+                        </a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>Stats</h2>
+        <div class="stats">
+            <img
+                    class="stats__img"
+                    height="160"
+                    alt="GitHub stats"
+                    src="https://github-readme-stats.vercel.app/api?username=kanecatdev&show_icons=true&hide_title=true"
+                    loading="lazy"
+            />
+            <img
+                    class="stats__img"
+                    height="160"
+                    alt="Top languages"
+                    src="https://github-readme-stats.vercel.app/api/top-langs/?username=kanecatdev&layout=compact"
+                    loading="lazy"
+            />
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>What I'm working on now</h2>
         <ul class="list">
-          <li>Currently: <strong>Higher Vocational Training in Computer Science</strong></li>
-          <li>Focused on: <strong>Android / Java / Python</strong></li>
-          <li>Personal goal: learn <strong>C#</strong> for <strong>Unity</strong> and build video games</li>
+            <li>Improving my class projects (Java, Kotlin, Python, SQL, C# + Unity)</li>
+            <li>Building apps and practicing architecture</li>
+            <li>Learning 3D modeling in Blender</li>
         </ul>
-      </section>
-
-      <section class="card">
-        <h2>Technologies</h2>
-
-        <div class="stack">
-          <h3>Languages</h3>
-          <p class="pillrow">
-            <span class="pill">Java</span>
-            <span class="pill">Python</span>
-            <span class="pill">Kotlin</span>
-            <span class="pill">HTML</span>
-            <span class="pill">CSS</span>
-            <span class="pill">C#</span>
-          </p>
-        </div>
-
-        <div class="stack">
-          <h3>Tools</h3>
-          <p class="pillrow">
-            <span class="pill">Git</span>
-            <span class="pill">GitHub</span>
-            <span class="pill">IntelliJ</span>
-            <span class="pill">Android Studio</span>
-            <span class="pill">VS Code</span>
-            <span class="pill">MySQL / SQL</span>
-            <span class="pill">Spring Boot</span>
-          </p>
-        </div>
-      </section>
     </section>
 
     <section class="card">
-      <h2>Featured Projects</h2>
-
-      <div class="tablewrap" role="region" aria-label="Featured projects table" tabindex="0">
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Info</th>
-              <th>Link</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Gakeyru</strong></td>
-              <td>A mobile app to find video game deals.</td>
-              <td><span class="muted">*(Testing / Internal testing)* (Play Store)</span></td>
-            </tr>
-            <tr>
-              <td><strong>Guess Who? (Reflex)</strong></td>
-              <td>“Guess Who?” game built with the <em>Reflex</em> framework.</td>
-              <td>
-                <a class="link" href="https://github.com/kanecatdev/quien-es-quien" target="_blank" rel="noreferrer">
-                  Guess Who? (GitHub)
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section class="card">
-      <h2>Stats</h2>
-      <div class="stats">
-        <img
-          class="stats__img"
-          height="160"
-          alt="GitHub stats"
-          src="https://github-readme-stats.vercel.app/api?username=kanecatdev&show_icons=true&hide_title=true"
-          loading="lazy"
-        />
-        <img
-          class="stats__img"
-          height="160"
-          alt="Top languages"
-          src="https://github-readme-stats.vercel.app/api/top-langs/?username=kanecatdev&layout=compact"
-          loading="lazy"
-        />
-      </div>
-    </section>
-
-    <section class="card">
-      <h2>What I'm working on now</h2>
-      <ul class="list">
-        <li>Improving my class projects (Java, Kotlin, Python, SQL, C# + Unity)</li>
-        <li>Building apps and practicing architecture</li>
-        <li>Learning 3D modeling in Blender</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2>Contact</h2>
-      <p class="contact">
-        Email:
-        <a class="link" href="mailto:kanecat.dev@gmail.com">kanecat.dev@gmail.com</a>
-      </p>
+        <h2>Contact</h2>
+        <p class="contact">
+            Email:
+            <a class="link" href="mailto:kanecat.dev@gmail.com">kanecat.dev@gmail.com</a>
+        </p>
     </section>
 
     <footer class="footer">
-      <p><em>Last updated: 16/12/2025</em></p>
+        <p><em>Last updated: 20/12/2025</em></p>
     </footer>
-  </main>
+</main>
 </body>
 </html>
